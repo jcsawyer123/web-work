@@ -1,4 +1,4 @@
-# ${1:Project Name}
+# Introduction to Website Creation
 This repository contains a simple set of premade websites to help learn how website design and creation works.
 - HTML, CSS, JS
   - This folder contains a multi-lesson look at the basics of these three aspects of website creation.
