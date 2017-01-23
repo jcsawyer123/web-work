@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Linking the stylesheets to the webpage-->
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Optional Bootstrap Theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+  <title>JS for beginners</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Lets play with jQuery</h1>
+    <button class="panel-button" data-panelid="panel1">#btn1</button>
+    <button class="panel-button" data-panelid="panel2">#btn2</button>
+    <button class="panel-button" data-panelid="panel3">#btn3</button>
+    <button class="panel-button" data-panelid="panel4">#btn4</button>
+    <br>
+    <button class="panel-button" data-panelid="panel5">#btn5</button>
+    <button class="panel-button" data-panelid="panel6">#btn6</button>
+    <button class="panel-button" data-panelid="panel7">#btn7</button>
+    <button class="panel-button" data-panelid="panel8">#btn8</button>
+    <br>
+    <button class="panel-button" data-panelid="panelb">#bertha</button>
+  </div>
+
+  <!-- These are panels that are using bootstrap#
+If you dont know what that is look at the previous
+examples in HTML,CSS,JS-->
+
+  <div class="row">
+    <div class="col-xs-3">
+      <div id="panel1" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel1
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel2" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel2
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel3" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel3
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel4" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel4
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel5" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel5
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel6" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel6
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel7" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel7
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel8" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel8
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12">
+      <div id="panelb" class="panel panel-primary">
+        <div class="panel-heading">
+          #Big Panel
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+  <!-- Load scripts at the end otherwise the page will appear to load slower
+        This is because it will load the script before the content-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custom Javascript -->
+  <script src="script.js"></script>
+  <!-- JjQuery Scripts -->
+  <script>
+
+
+    // Time to DRY our previous code
+    // Don't repeat yourself
+    $(function() {
+
+      var accessed = "This has been accessed";
+
+      $('.panel-button').on('click', function() { //Looks for anything with the class .panel-button
+        var panelId = $(this).attr('data-panelid'); // Stores the value of the data-panelid attribute we created and clicked on
+        $('#'+panelId).toggle(); // Takes the value of the panel and toggles the panel/
+        $('#'+panelId+' .panel-body').html(accessed) // Adds the variable from above and changes the panel body to its contents
+        // This is the information of what is  being used
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>

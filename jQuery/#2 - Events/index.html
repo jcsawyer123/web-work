@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Linking the stylesheets to the webpage-->
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Optional Bootstrap Theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+  <title>JS for beginners</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Lets play with jQuery</h1>
+    <button id="btn1">#btn1</button>
+    <button id="btn2">#btn2</button>
+    <button id="btn3">#btn3</button>
+    <button id="btn4">#btn4</button>
+    <br>
+    <button id="btn5">#btn5</button>
+    <button id="btn6">#btn6</button>
+    <button id="btn7">#btn7</button>
+    <button id="btn8">#btn8</button>
+    <br>
+    <button id="bertha">#bertha</button>
+  </div>
+
+  <!-- These are panels that are using bootstrap#
+If you dont know what that is look at the previous
+examples in HTML,CSS,JS-->
+
+  <div class="row">
+    <div class="col-xs-3">
+      <div id="panel1" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel1
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel2" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel2
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel3" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel3
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel4" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel4
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel5" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel5
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel6" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel6
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel7" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel7
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel8" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel8
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12">
+      <div id="panelb" class="panel panel-primary">
+        <div class="panel-heading">
+          #Big Panel
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+  <!-- Load scripts at the end otherwise the page will appear to load slower
+        This is because it will load the script before the content-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custom Javascript -->
+  <script src="script.js"></script>
+  <!-- JjQuery Scripts -->
+  <script>
+
+    // Tells the script to wait until the page has loaded
+    // $(document).ready(function))  {
+    //
+    // });
+
+    // Works the same as the previous but is shorter
+    $(function() {
+      // $('#btn1').html('my button'); //jQuery can edit html
+
+      // $('#btn1').on('click', function() {  // You can have listen events
+      //   $('#panel1').slideToggle(200);      // When btn1 is clicked it will slidetoggle on panel1
+      // });
+      //
+      // $('#panel2').on('click', function() {
+      //   $('#panel2').fadeOut(200);
+      //});
+
+      $('#btn1').on('click', function() {
+        $('#panel1').fadeToggle(200);
+      });
+
+      $('#btn2').on('click', function() {
+        $('#panel2').fadeToggle(200);
+      });
+
+      $('#btn3').on('click', function() {
+        $('#panel3').fadeToggle(200);
+      });
+
+      $('#btn4').on('click', function() {
+        $('#panel4').fadeToggle(200);
+      });
+
+// Mouseover events
+
+      $('#btn5').on('mouseover', function() {
+        $('#panel5').fadeToggle(200);
+      });
+
+      $('#btn6').on('mouseover', function() {
+        $('#panel6').fadeToggle(200);
+      });
+
+      $('#btn7').on('mouseover', function() {
+        $('#panel7').fadeToggle(200);
+      });
+
+      $('#btn8').on('mouseover', function() {
+        $('#panel8').fadeToggle(200);
+      });
+
+// Adding Content Example
+      $('#btn1').on('click', function() {
+        $('#panel1 .panel-body').html('New panel content');
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>

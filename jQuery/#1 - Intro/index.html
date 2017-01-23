@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Linking the stylesheets to the webpage-->
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Optional Bootstrap Theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+  <title>JS for beginners</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Lets play with javascript</h1>
+    <button id="btn1">#btn1</button>
+    <button id="btn2">#btn2</button>
+    <button id="btn3">#btn3</button>
+    <button id="btn4">#btn4</button>
+  </div>
+
+  <!-- These are panels that are using bootstrap#
+If you dont know what that is look at the previous
+examples in HTML,CSS,JS-->
+
+  <div class="row">
+    <div class="col-xs-3">
+      <div id="panel1" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel1
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel2" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel2
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel3" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel3
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel4" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel4
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel5" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel5
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel6" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel6
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel7" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel7
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel8" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel8
+        </div>
+        <div class="panel-body"> content
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  <!-- Load scripts at the end otherwise the page will appear to load slower
+        This is because it will load the script before the content-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custom Javascript -->
+  <script src="script.js"></script>
+  <!-- JjQuery Scripts -->
+  <script>
+
+    // Tells the script to wait until the page has loaded
+    // $(document).ready(function))  {
+    //
+    // });
+
+    // Works the same as the previous but is shorter
+    $(function() {
+
+
+      $('#panel1').hide(300).show(1000); //Selector, Works like CSS. Selects id panel1.
+                          // Followed by the method. This method tells it to hide over the course of 300ms
+                          // jQuery is chainable. So we can hide and show it.
+      $('#panel2').slideUp(1000).delay(1000).slideDown(1000);
+
+      $('#panel3').fadeOut(1000).delay(1000).fadeIn(1000);
+
+      $('#panel4').fadeToggle(1000).fadeToggle(1000); // Toggles the fade state.
+                                                      // There are lots of toggles, slideToggle for sliding, just toggle for show/hide
+      $('#panel5').toggle(1000).toggle(1000);
+
+      $('#panel6').css({
+        color:'#FFAC0B',
+        fontWeight: 'bold',
+      }); //Can add CSS to things
+      // If you want to use something with a - in you have to add ' '
+      // like so: 'font-weight'
+      // Alternatively you can use: fontWeight
+
+    });
+
+  </script>
+
+</body>
+</html>
