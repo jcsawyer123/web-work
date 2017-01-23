@@ -3,10 +3,12 @@ This repository contains a simple set of premade websites to help learn how webs
 - HTML, CSS, JS
   - This folder contains a multi-lesson look at the basics of these three aspects of website creation.
   - Introduction to bootstrap
+  
 ## Installation
 Press clone or download,
 You can download everything inside of a zip file alternatively you can use git to clone the contents.
 If you dont know what the last part means then just download as ZIP Fille.
+
 ## Credits
 jcsawer(me) - Creating the repository and the contents
 
