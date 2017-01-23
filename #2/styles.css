@@ -1,0 +1,27 @@
+body {
+  background: #A2A2A2;
+  font-family: arial;
+}
+/* You can apply styling to multiple things by using a comma like so */
+h1, h2, li {
+  color: #000AFF;
+}
+
+a {
+  color: #525252 ;
+}
+
+p{
+  background: #666;
+  color: white;
+  padding: 10px 10px 0px 0px; /* Works like Top, Bottom, Left, Right */
+}
+
+.secondary { /* The . shows we are looking for a class. This wil override the tag values*/
+  background: none;
+  color: #A70C1E;
+}
+
+#special { /* The # shows we are looking for an id. This will overide classes*/
+  background: #F49EF3;
+}

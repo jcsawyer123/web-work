@@ -1,0 +1,16 @@
+body{
+  background: #fff; /* colour of whole webpage */
+  font-family: arial; /* What font the webpage uses */
+}
+/* Top to bottom = Order of specifity */
+p#main{
+  color:green;
+}
+
+p.primary{
+  color:red;
+}
+
+p{
+  color:blue;
+}
