@@ -10,7 +10,7 @@ You can download everything inside of a zip file alternatively you can use git t
 If you dont know what the last part means then just download as ZIP Fille.
 
 ## Credits
-jcsawer(me) - Creating the repository and the contents
+(me) jcsawer - Creating the repository and the contents
 
 ## License
 MIT License
